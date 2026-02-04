@@ -1,42 +1,46 @@
 Caesar Cipher CLI Tool (Windows)
+Overview
 
-A lightweight Command Line Interface (CLI) tool for encrypting and decrypting text using the Caesar Cipher.
-Built in Python, designed for Windows, and suitable for academic submissions and beginner cryptography demos.
+This project implements a Command Line Interface (CLI) based Caesar Cipher encryption and decryption tool for Windows systems.
+The tool allows users to encrypt or decrypt text using a fixed shift value supplied through command-line arguments.
 
-📌 Project Highlights
+The Caesar Cipher is a classical substitution cipher and is used in this project strictly for educational and demonstrative purposes.
 
-✅ Encrypt & decrypt text using Caesar Cipher
+Features
 
-✅ Preserves uppercase, lowercase, numbers, spaces, and symbols
+Encrypt and decrypt text using the Caesar Cipher
 
-✅ User-defined shift value (auto-normalized)
+Accepts input through command-line arguments
 
-✅ Windows-compatible CLI (Command Prompt / PowerShell)
+Preserves uppercase, lowercase, numbers, and special characters
 
-✅ Clean argument parsing with --help support
+Supports large shift values using modulo arithmetic
 
-🛠️ Tech Stack
+Compatible with Windows Command Prompt and PowerShell
 
-Language: Python 3.8+
+Scriptable and automation-friendly
+
+Technologies Used
+
+Programming Language: Python 3
 
 Platform: Windows
 
-Libraries: argparse (standard library)
+Library: argparse (Python standard library)
 
+Requirements
 
-⚙️ Installation & Setup
-1️⃣ Install Python
+Windows Operating System
 
-Download from: https://www.python.org
+Python 3.8 or higher
 
-✔ Ensure “Add Python to PATH” is checked during installation.
+Python added to system PATH
 
-Verify:
-
+Verify Python Installation
 python --version
 
-🚀 Usage
-Encrypt
+Usage
+Encrypt Text
 python caesar.py -t "Hello World!" -s 3
 
 
@@ -44,7 +48,7 @@ Output
 
 Khoor Zruog!
 
-Decrypt
+Decrypt Text
 python caesar.py -t "Khoor Zruog!" -s 3 -d
 
 
@@ -55,65 +59,33 @@ Hello World!
 Help Menu
 python caesar.py --help
 
-🧾 Command-Line Arguments
-Flag	Description
+Command-Line Arguments
+Option	Description
 -t, --text	Input text
 -s, --shift	Shift value (integer)
--d, --decrypt	Enable decryption mode
-🖥️ Run as a Windows Command (Optional)
+-d, --decrypt	Enables decryption mode
+Flowchart Diagram
 
-Create caesar.bat:
+Figure: Flowchart representing the working of the Caesar Cipher CLI tool for encryption and decryption.
 
-@echo off
-python "%~dp0caesar.py" %*
+Applications
 
+Learning basic cryptography concepts
 
-Add the folder to Environment Variables → Path
+Understanding command-line based programs
 
-Now run from anywhere:
+Academic assignments and lab submissions
 
-caesar -t "Attack at dawn!" -s 4
+Foundation for advanced encryption techniques
 
-🧠 Algorithm (High-Level)
+Limitations
 
-Read command-line arguments
+Not suitable for real-world secure communication
 
-Normalize shift using modulo 26
+Vulnerable to brute-force attacks
 
-Reverse shift if decrypt mode
+Intended only for educational use
 
-For each character:
+Conclusion
 
-Shift alphabetic characters
-
-Preserve others
-
-Print output
-
-📚 Use Cases
-
-Cryptography fundamentals
-
-CLI tool development practice
-
-Academic assignments
-
-Interview / internship demonstrations
-
-⚠️ Limitations
-
-❌ Not cryptographically secure
-
-❌ Easily breakable via brute force
-
-❌ Educational use only
-
-📄 Report
-
-A detailed project report with algorithm and flowchart is included:
-
-📎 Caesar_Cipher_CLI_Report.pdf
-
-🏁 Conclusion
-
-This project demonstrates a clean and functional implementation of the Caesar Cipher using a Windows-based CLI approach. While unsuitable for real-world security, it effectively showcases command-line design, character manipulation, and basic cryptographic concepts.
+This project demonstrates a clean and functional implementation of the Caesar Cipher using a Windows-based CLI approach. While the cipher itself is not secure for modern applications, the project effectively illustrates encryption logic, character manipulation, and command-line program design.
